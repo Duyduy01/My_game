@@ -1,0 +1,15 @@
+@import url("./cloud/rain.css");
+
+:root {
+  --font-size-body: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--font-size-body);
+}

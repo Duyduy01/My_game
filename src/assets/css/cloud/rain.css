@@ -1,0 +1,39 @@
+.cloud.rainy {
+  animation: bolt 4s steps(1) infinite;
+}
+.cloud.rainy > .raindrop {
+  --color: #fff;
+  position: absolute;
+  top: 40px;
+  height: 10px;
+  width: 2px;
+  background-color: var(--color);
+  filter: none;
+  transform-origin: bottom;
+  animation: raining 2s linear infinite;
+}
+
+@keyframes raining {
+  0% {
+    transform: translateY(0) scaleY(1);
+  }
+  70% {
+    transform: translateY(300px) scaleY(1);
+  }
+  80% {
+    transform: translateY(300px) scaleY(0.2);
+  }
+  100% {
+    transform: translateY(300px) scaleY(0) scaleX(15);
+  }
+}
+
+@keyframes bolt {
+  0% {
+    filter: drop-shadow(8px 8px 0 #0001) drop-shadow(0 0 0 #fff) brightness(1);
+  }
+  95% {
+    filter: drop-shadow(8px 8px 0 #0001) drop-shadow(0 0 50px #fff5)
+      brightness(10);
+  }
+}
